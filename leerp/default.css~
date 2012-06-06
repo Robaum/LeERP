@@ -1,0 +1,295 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 30px 0 0 0;
+	padding: 0;
+	background: #FFFFFF url(images/img01.png) repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+	overflow:hidden;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #3E3E3E;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p, ul, ol {
+	margin: 0 0 2em 0;
+	text-align: justify;
+	line-height: 26px;
+	font-size: 11px;
+}
+
+a:link {
+	color: #7BAA0F;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #003448;
+}
+
+a:visited {
+	color: #333333;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+img.right {
+	float: right;
+	margin-left: 15px;
+}
+
+/* Form */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+input, textarea, select {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+/* Header */
+
+#header {
+	width: 850px;
+	height: 82px;
+	margin: 0 auto 20px auto;
+	background: url(images/img03.gif) repeat-x left bottom;
+}
+
+#logo {
+	float: left;
+}
+
+#logo h1 {
+	font-size: 38px;
+	color: #494949;
+}
+
+#logo h1 sup {
+	vertical-align: text-top;
+	font-size: 24px;
+}
+
+#logo h1 a {
+	color: #494949;
+}
+
+#logo h2 {
+	margin-top: -10px;
+	font-size: 12px;
+	color: #A0A0A0;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+/* Menu */
+
+#menu {
+	float: right;
+	position: relative;
+	top: 55px;
+	z-index: 100;
+}
+
+/* Page */
+
+#page {
+	width: 850px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: left;
+	width: 850px;
+}
+
+/* Post */
+
+.post {
+}
+
+.post .title {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	background: url(images/img03.gif) repeat-x left bottom;
+}
+
+.post .entry {
+}
+
+.post .meta {
+	padding: 15px 0 60px 0;
+	background: url(images/img03.gif) repeat-x;
+}
+
+.post .meta p {
+	margin: 0;
+	line-height: normal;
+	color: #999999;
+}
+
+.post .meta .byline {
+	float: left;
+}
+
+.post .meta .links {
+	float: right;
+}
+
+.post .meta .more {
+	padding: 0 20px 0 18px;
+	background: url(images/img06.gif) no-repeat left center;
+}
+
+.post .meta .comments {
+	padding-left: 22px;
+	background: url(images/img07.gif) no-repeat left center;
+}
+
+.post .meta b {
+	display: none;
+}
+
+/* Sidebar */
+
+
+
+/* Search */
+
+
+
+/* Footer */
+
+#footer {
+	height: 1000px;
+	background: #000 url(images/img09.png) repeat;
+}
+
+
+#footer .wrap {
+	width: 850px;
+	margin: 0 auto;
+}
+
+#legal {
+	text-align: center;
+	color: #ffffff;
+}
+
+#nav, #nav ul{
+font-size: 15px;
+margin:0;
+padding:0;
+list-style-type:none;
+list-style-position:outside;
+position:relative;
+line-height:1.5em; 
+}
+
+#nav a{
+display:block;
+padding:0px 5px;
+border:1px solid #333;
+color:#fff;
+text-decoration:none;
+background-color:#333;
+}
+
+#nav a:hover{
+background-color:#fff;
+color:#333;
+}
+
+#nav li{
+float:left;
+position:relative;
+}
+
+#nav ul {
+position:absolute;
+display:none;
+width:12em;
+top:1.5em;
+}
+
+#nav li ul a{
+width:12em;
+height:auto;
+float:left;
+}
+
+#nav ul ul{
+top:auto;
+}	
+
+#nav li ul ul {
+left:12em;
+margin:0px 0 0 10px;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul{
+display:none;
+background-color:#000;
+color: #eee;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul{
+display:block;
+background-color:#000;
+color: #eee;
+}
+
+
+
+.clean-gray{
+margin-left: 10px;
+border:solid 1px #DEDEDE; 
+background:#EFEFEF;
+color:#222222;
+padding:4px;
+text-align:center;
+}
+

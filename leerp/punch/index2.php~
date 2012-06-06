@@ -1,0 +1,12 @@
+<?php
+include("../connect.php");
+$tbl_name="users";
+if($_POST['numb'] != ""){
+	setcookie("ne3", $_POST['numb'] , time()+36000);
+	$sql="INSERT INTO punchs (`lat`, `long`, `number`, `time`) VALUES ('".$_POST['lat']."', '".$_POST['longi']."', '".$_POST['numb']."','".$_POST['time']."')";
+	mysql_query($sql);
+	echo "<center><p>Saved!</p></center>";
+}else{
+	echo "<center><p>Something went wrong, please refresh the page.</p></center>";
+}
+?>

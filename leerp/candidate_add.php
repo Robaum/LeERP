@@ -1,0 +1,95 @@
+<?php
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+session_start();
+include("connect.php");
+if(!isset($_SESSION['id'])){
+header("location:index.php?e=1");
+}
+$le_user_id = $_SESSION['id'];
+
+$sql="SELECT * FROM structure";
+$result=mysql_query($sql);
+
+echo "<h1 class='title'>add candidate</h1><br/>";
+
+echo "
+<table>
+<tr>
+	<td>First Name:</td>
+	<td>&nbsp;</td>
+	<td><input type='text' style='width:300px;' id='fname' value=''></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>Last Name:</td>
+	<td>&nbsp;</td>
+	<td><input type='text' style='width: 300px;' id='lname' value=''></td>
+</tr>
+<tr><td colspan='9'>&nbsp;</td></tr>
+<tr>
+	<td style='text-align: right;'>Phone:</td>
+	<td>&nbsp;</td>
+	<td><input type='text' style='width: 300px;' id='phone'  value=''></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>Email:</td>
+	<td>&nbsp;</td>
+	<td><input type='text' style='width: 300px;' id='email'  value=''></td>
+</tr>
+<tr><td colspan='9'>&nbsp;</td></tr>
+<tr>
+	<td  style='text-align: right;'>Twitter:</td>
+	<td>&nbsp;</td>
+	<td><input type='text' style='width: 300px;' id='twitter' value=''></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>Position:</td>
+	<td>&nbsp;</td>
+	<td><select id='positionee'>
+		";
+while($row = mysql_fetch_object($result)){
+	$sql2= "SELECT * FROM info_jobs where id_structure=" . $row->id;
+	$result2=mysql_query($sql2);
+	if(mysql_num_rows($result2) == 0){
+		echo "<option value='".$row->id."'>".$row->posicion."</option>";
+	}
+}
+echo "
+		</select>	
+	</td>
+</tr>
+<tr><td colspan='9'>&nbsp;</td></tr>
+<tr>
+	<td  style='text-align: right;' valign='top'>Picture:</td>
+	<td>&nbsp;</td>
+	<td>
+		<div id='file-uploader-demo1'>		
+			<noscript>			
+				<p>Please enable JavaScript to use file uploader.</p>
+				<!-- or put a simple form for upload here -->
+			</noscript>         
+		</div>
+	</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td valign='top'>Resume:</td>
+	<td>&nbsp;</td>
+	<td>
+		<div id='file-uploader-demo2'>		
+			<noscript>			
+				<p>Please enable JavaScript to use file uploader.</p>
+				<!-- or put a simple form for upload here -->
+			</noscript>         
+		</div>
+	</td>
+</tr>
+<tr><td colspan='9'>&nbsp;</td></tr>
+<tr><td colspan='9'><center><input type='button' value='Save' onclick='save_candidate();'/></center></td></tr>
+</table>";
+
+
+?>
