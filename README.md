@@ -1,4 +1,8 @@
-LeERP install:
+# LeERP
+
+Small ERP made with HTTP, CSS, JS and PHP.
+
+## Install
 
 1. Make a database and import le_erp.sql
 
